@@ -3,7 +3,7 @@ session_start();
 require 'connection.php';
 $conn = Connect();
 if(!isset($_SESSION['login_user'])){
-	header("location: customerlogin.php"); //Redirecting to myrestaurant Page
+	header("location: customerlogin.php"); 
 }
 ?>
 <?php

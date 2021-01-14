@@ -197,6 +197,8 @@ else {
 		</table>
 	</div> -->
 			<form method="post" action="cart.php?action=add&id= <?php echo $row['Product_id']; ?>">
+				<input type="hidden" name="hidden_name" value="<?php echo $row['pro_name']; ?>">
+				<input type="hidden" name="hidden_price" value="<?php echo $row['price']; ?>">
 				<button type="submit" name="add" style="margin-top:5px;" class="btn btn-light btn-md mr-1 mb-2" value="Add to Cart" method="post"><i class="fas fa-shopping-cart pr-2"></i>Add to Cart</button>
 			</form>
 			</div>

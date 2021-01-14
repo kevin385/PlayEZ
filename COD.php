@@ -27,18 +27,18 @@ unset($_SESSION["cart"]);
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 		<div class="container">
-			<a class="navbar-brand" href="#">PlayEZ</a>
+			<a class="navbar-brand" href="./index.php">PlayEZ</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
-					<li class="nav-item">
-						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+					<li class="nav-item active">
+						<a class="nav-link" href="./index.php">Home <span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="./aboutus.html">About Us</a>
+						<a class="nav-link" href="./aboutus.php">About Us</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="./catalog.php">Catalog</a>
@@ -75,15 +75,15 @@ unset($_SESSION["cart"]);
 						</div>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="./contactus.html">Contact Us <span class="sr-only">(current)</span></a>
+						<a class="nav-link" href="./contactus.php">Contact Us <span class="sr-only">(current)</span></a>
 					</li>
 				</ul>
-				<?php
-				if (isset($_SESSION['login_user'])) {
-					?>
-					<ul class="navbar-nav navbar-right">
-						<li><a href="#"><span class="fa fa-user"></span> Welcome <?php echo $_SESSION['login_user']; ?> </a></li>
-						<li><a href="cart.php"><span class="fa fa-shopping-cart"></span> Cart
+<?php
+if (isset($_SESSION['login_user'])) {
+?>
+				<ul class="navbar-nav navbar-right">
+					<li><a href="#"><span class="fa fa-user"></span> Welcome <?php echo $_SESSION['login_user']; ?>  </a></li>
+					<li><a href="cart.php"><span class="fa fa-shopping-cart"></span> Cart
 							(<?php
 								if(isset($_SESSION["cart"])){
 									$count = count($_SESSION["cart"]); 
@@ -92,22 +92,22 @@ unset($_SESSION["cart"]);
 								else
 									echo "0";
 								?>)
-							</a></li>
-							<li><a href="logout_u.php"><span class="fa fa-log-out"></span> Log Out </a></li>
-						</ul>
-						<?php        
-					}
-					else {
-						?>
-						<a class="text-white" href="./customerlogin.php">
-							<span class="fa fa-sign-in"></span>Login
-						</a>
-						<?php
-					}
-					?>
-				</div>
+					</a></li>
+					<li><a href="logout_u.php"><span class="fa fa-log-out"></span> Log Out </a></li>
+					</ul>
+<?php        
+}
+else {
+?>
+				<a href="./customerlogin.php">
+					<span class="fa fa-sign-in"></span>Login
+				</a>
+<?php
+}
+?>
 			</div>
-		</nav>
+		</div>
+	</nav>
 
 
 

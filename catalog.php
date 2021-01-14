@@ -19,7 +19,7 @@
 	<link rel="stylesheet" href="css/bootstrap-social.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
-
+ 
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 		<div class="container">
